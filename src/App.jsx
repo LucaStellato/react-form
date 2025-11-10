@@ -9,10 +9,11 @@ export default function App() {
   ])
   const [newArticles, setNewArticles] = useState('');
   const addArticles = e => {
-    articles.push(newArticles);
+    e.preventDefault()
+    const updatedArticles = [...articles, { title: newArticles }];
+    setArticles(updatedArticles);
   }
-  const updatedArticles = [...articles, newArticles];
-  setArticles(updatedArticles);
+
   return (
     <>
       <form onSubmit={addArticles}>
