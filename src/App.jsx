@@ -14,12 +14,15 @@ export default function App() {
   }
   return (
     <>
+      <form onSubmit={addArticles}>
+
+      </form>
       <ul>
         {articles.map((article) => (
           <li key={article.id}>{article.title}</li>
         ))}
       </ul>
-      <form></form>
+
     </>
 
   )
