@@ -2,16 +2,17 @@ import { useState } from 'react'
 
 
 export default function App() {
-  const articles = [
+  const [articles, setArticles] = useState([
     { id: 1, title: 'Primo articolo' },
     { id: 2, title: 'Secondo articolo' },
     { id: 3, title: 'Terzo articolo' },
-  ]
+  ])
   const [newArticles, setNewArticles] = useState('');
   const addArticles = e => {
-    e.preventDefault();
-    articles.push(newArticles)
+    articles.push(newArticles);
   }
+  const updatedArticles = [...articles, newArticles];
+  setArticles(updatedArticles);
   return (
     <>
       <form onSubmit={addArticles}>
