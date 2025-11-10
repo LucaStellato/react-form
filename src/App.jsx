@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <ul>
-        {articles.map((article, index) => (
+        {articles.map((article) => (
           <li key={article.id}>{article.title}</li>
         ))}
       </ul>
