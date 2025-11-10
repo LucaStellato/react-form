@@ -7,7 +7,15 @@ export default function App() {
     { id: 2, title: 'Secondo articolo' },
     { id: 3, title: 'Terzo articolo' },
   ]
+  const [newTask, setNewTask] = useState('');
   return (
-    
+    <>
+      <ul>
+        {articles.map((article, index) => (
+          <li key={article.id}>{article.title}</li>
+        ))}
+      </ul>
+    </>
+
   )
 }
