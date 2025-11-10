@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <form onSubmit={addArticles}>
-        <input type='text' value={newArticles}></input>
+        <form type='text' value={newArticles} onChange={(e) => setNewTitle(e.target.value)} />
         <button>invia</button>
       </form>
       <ul>
