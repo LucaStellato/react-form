@@ -16,7 +16,7 @@ export default function App() {
     <>
       <form onSubmit={addArticles}>
         <input type='text' value={newArticles} onChange={(e) => setNewArticles(e.target.value)} />
-        <button>invia</button>
+        <button type='submit'>invia</button>
       </form>
       <ul>
         {articles.map((article) => (
