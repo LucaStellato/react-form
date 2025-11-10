@@ -7,7 +7,11 @@ export default function App() {
     { id: 2, title: 'Secondo articolo' },
     { id: 3, title: 'Terzo articolo' },
   ]
-  const [newTask, setNewTask] = useState('');
+  const [newArticles, setNewArticles] = useState('');
+  const addArticles = e => {
+    e.preventDefault();
+    articles.push(newArticles)
+  }
   return (
     <>
       <ul>
@@ -15,6 +19,7 @@ export default function App() {
           <li key={article.id}>{article.title}</li>
         ))}
       </ul>
+      <form></form>
     </>
 
   )
