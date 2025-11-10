@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <form onSubmit={addArticles}>
-
+        <input type='text' value={newArticles}></input>
         <button>invia</button>
       </form>
       <ul>
