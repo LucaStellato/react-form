@@ -16,6 +16,7 @@ export default function App() {
     <>
       <form onSubmit={addArticles}>
 
+        <button>invia</button>
       </form>
       <ul>
         {articles.map((article) => (
