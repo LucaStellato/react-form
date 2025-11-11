@@ -10,7 +10,7 @@ export default function App() {
   const [newArticles, setNewArticles] = useState('');
   const addArticles = e => {
     e.preventDefault()
-    const updatedArticles = [...articles, { title: newArticles }];
+    const updatedArticles = [...articles, { id: articles.length }, { title: newArticles }];
     setArticles(updatedArticles);
   }
 
